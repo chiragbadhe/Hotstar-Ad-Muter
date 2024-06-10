@@ -1,87 +1,75 @@
-# 🎬 Hotstar Ad Muter 🎬
+# Hotstar Ad Muter
 
-Welcome to the **Hotstar Ad Muter**! Tired of those pesky ads interrupting your binge-watching on Hotstar? This Chrome extension automatically mutes ads and unmutes when they're over. Enjoy uninterrupted viewing with just a click! 🚀
+Welcome to Hotstar Ad Muter! This Chrome extension automatically mutes ads on Hotstar and unmutes when the ad stops. Enjoy uninterrupted viewing experience without the annoyance of ads!
 
 ## Features
 
-- **Mute Ads**: Automatically mutes video ads.
+- **Ad Muting**: Automatically mutes video ads on Hotstar.
 - **Unmute After Ads**: Restores sound when ads are over.
-- **Easy Control**: Start and stop the muting functionality with a simple popup.
+- **Easy Control**: Simple user interface for starting and stopping ad muting.
 
 ## Installation
 
-Follow these simple steps to get started:
+Follow these steps to install Hotstar Ad Muter:
 
-1. **Download the Extension:**
+1. **Clone the Repository**: Clone or download this repository to your local machine.
 
-   - Clone or download this repository to your local machine.
+    ```sh
+    git clone https://github.com/chiragbadhe/Hotstar-Ad-Muter.git
+    ```
 
-   ```sh
-   git clone https://github.com/chiragbadhe/Hotstar-Ad-Muter.git
-   ```
+2. **Compile TypeScript**: If you're using TypeScript, compile the TypeScript code to JavaScript. Refer to the [Compilation](#compilation) section below for instructions.
 
-2. **Prepare the Extension:**
-
-   - Ensure all files are in place:
-     ```
-     hotstar-ad-muter/
-     ├── manifest.json
-     ├── background.js
-     ├── content.js
-     ├── popup.html
-     ├── popup.js
-     └── icons/
-         ├── icon16.png
-         ├── icon48.png
-         └── icon128.png
-     ```
-
-3. **Load the Extension into Chrome:**
-
+3. **Load the Extension in Chrome**:
    - Open Chrome and go to `chrome://extensions/`.
    - Enable **Developer mode** by toggling the switch in the top right corner.
    - Click **Load unpacked** and select the `hotstar-ad-muter` directory.
 
-4. **Enjoy Ad-Free Viewing:**
-   - Navigate to Hotstar.
-   - Click the Hotstar Ad Muter extension icon in your Chrome toolbar.
-   - Click **Start** to enable ad muting.
-   - Click **Stop** to disable ad muting.
+4. **Enjoy Ad-Free Viewing**: Navigate to Hotstar, click on the Hotstar Ad Muter extension icon, and start enjoying ad-free entertainment!
+
+## Compilation
+
+If you're using TypeScript, you need to compile the TypeScript code to JavaScript before loading the extension into Chrome. Here's how you can do it:
+
+### Using TypeScript Compiler (`tsc`)
+
+1. Install TypeScript globally:
+
+    ```sh
+    npm install -g typescript
+    ```
+
+2. Run the TypeScript compiler (`tsc`) in the project directory:
+
+    ```sh
+    tsc
+    ```
+
+### Using Webpack
+
+1. Install Webpack and TypeScript dependencies:
+
+    ```sh
+    npm install webpack webpack-cli ts-loader typescript --save-dev
+    ```
+
+2. Run Webpack to compile the TypeScript code:
+
+    ```sh
+    npx webpack
+    ```
 
 ## Usage
 
-1. **Navigate to Hotstar:**
+1. **Navigate to Hotstar**: Open your favorite TV show or movie on Hotstar.
 
-   - Open your favorite TV show or movie on Hotstar.
-
-2. **Control Ad Muting:**
-   - Click on the extension icon in the toolbar.
-   - Press the **Start** button to begin muting ads.
-   - Press the **Stop** button to disable the ad muting functionality.
-
-## Development
-
-Want to improve this extension? Follow these steps to get started:
-
-1. **Clone the Repository:**
-
-   - Use the following command to clone the repository:
-
-   ```sh
-   git clone https://github.com/chiragbadhe/Hotstar-Ad-Muter.git
-   ```
-
-2. **Make Your Changes:**
-
-   - Modify the code in your favorite code editor.
-   - Test your changes by loading the unpacked extension in Chrome.
-
-3. **Submit a Pull Request:**
-   - Once you're happy with your changes, submit a pull request for review.
+2. **Control Ad Muting**: Click on the Hotstar Ad Muter extension icon in the Chrome toolbar.
+   - Click **Start** to begin muting ads.
+   - Click **Stop** to disable ad muting.
 
 ## Contributing
 
-Contributions are welcome! Feel free to open issues or submit pull requests. Let's make Hotstar Ad Muter even better together! 💪
+Contributions are welcome! If you'd like to contribute to Hotstar Ad Muter, feel free to open an issue or submit a pull request.
 
 ## License
 

@@ -1,32 +1,32 @@
 {
     "manifest_version": 3,
-    "name": "Hotestar Ad Muter",
+    "name": "Hotstar Ad Muter",
     "version": "1.0",
-    "description": "Mutes ads on Hotestar and unmutes when the ad stops.",
+    "description": "Mutes ads on Hotstar and unmutes when the ad stops.",
     "permissions": [
         "activeTab",
         "scripting",
         "storage"
     ],
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "dist/background.js"
     },
     "content_scripts": [
         {
             "matches": [
-                "*://*.hotestar.com/*"
+                "*://*.hotstar.com/*"
             ],
             "js": [
-                "content.js"
+                "dist/content.js"
             ]
         }
     ],
     "action": {
-        "default_popup": "popup.html",
+        "default_popup": "src/popup.html",
         "default_icon": {
-            "16": "icons/icon16.png",
-            "48": "icons/icon48.png",
-            "128": "icons/icon128.png"
+            "16": "src/icons/icon16.png",
+            "48": "src/icons/icon48.png",
+            "128": "src/icons/icon128.png"
         }
     }
 }

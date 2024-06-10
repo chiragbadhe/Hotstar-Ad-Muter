@@ -1,12 +1,14 @@
+// content.ts
+
 let isAdMutingActive = false;
-let observer;
-let intervalId;
+let observer: MutationObserver | undefined;
+let intervalId: number | undefined;
 
 function startAdMuting() {
   if (isAdMutingActive) return;
 
   isAdMutingActive = true;
-  const videoPlayer = document.querySelector('video'); // Adjust the selector to match Hotestar's video player
+  const videoPlayer = document.querySelector('video');
 
   if (!videoPlayer) {
     console.warn("No video player found");
@@ -15,29 +17,29 @@ function startAdMuting() {
 
   function checkForAd() {
     // Replace with actual ad detection logic
-    return videoPlayer.classList.contains('ad-playing');
+    return videoPlayer!.classList.contains('ad-playing');
   }
 
   observer = new MutationObserver(() => {
     const adPlaying = checkForAd();
     if (adPlaying) {
-      videoPlayer.muted = true;
+      videoPlayer!.muted = true;
       console.log("Ad started, video muted");
     } else {
-      videoPlayer.muted = false;
+      videoPlayer!.muted = false;
       console.log("Ad ended, video unmuted");
     }
   });
 
   observer.observe(videoPlayer, { attributes: true, childList: true, subtree: true });
 
-  intervalId = setInterval(() => {
+  intervalId = window.setInterval(() => {
     const adPlaying = checkForAd();
     if (adPlaying) {
-      videoPlayer.muted = true;
+      videoPlayer!.muted = true;
       console.log("Ad started, video muted");
     } else {
-      videoPlayer.muted = false;
+      videoPlayer!.muted = false;
       console.log("Ad ended, video unmuted");
     }
   }, 1000);
